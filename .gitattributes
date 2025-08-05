@@ -11,3 +11,4 @@ model_assets/** filter=lfs diff=lfs merge=lfs -text
 *.pth filter=lfs diff=lfs merge=lfs -text
 *.pt filter=lfs diff=lfs merge=lfs -text
 Medical-Assistant-1/backend/model_assests/** filter=lfs diff=lfs merge=lfs -text
+Medical-Assistant-1/backend/model_assests/mri/3d/resnet_200.pth filter=lfs diff=lfs merge=lfs -text
