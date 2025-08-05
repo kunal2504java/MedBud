@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: medbud-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: "./frontend/build"
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://your-backend-service.onrender.com
+
+  - type: web
+    name: medbud-backend
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && python main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.9.0"
